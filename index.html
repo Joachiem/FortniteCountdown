@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Countdown for Fortnite</title>
+<link rel="shortcut icon" href="fortnite.jpg">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image: url("template.png");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  font-family: 'Cairo', sans-serif;
+  color: white;
+}
+.center {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<p class="center" id="countdown"></p>
+<script>
+/* Set time and date */var countDownDate = new Date("Dec 14, 2019 19:00:00 UTC").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();    
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+/* Set Output */ document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown").innerHTML = "No events planned!";
+  }
+}, 1000);
+</script>
+</body>
+</html>
