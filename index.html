@@ -28,10 +28,15 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 hr {
   margin: auto;
   width: 40%;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  font-size: 20px; 
 }
 </style>
 </head>
@@ -42,6 +47,9 @@ hr {
     <h1>Fortnite Presents</h1>
     <hr>
     <p id="cd" style="font-size:60px">Loading...</p>
+  </div>
+  <div class="bottomleft">
+    <p>Image by <a href="https://www.youtube.com/watch?v=_oWBmlLS4Ec">Epic Games</a></p>
   </div>
 </div>
 
@@ -59,13 +67,12 @@ var countdownfunction = setInterval(function() {
   var distance = countDownDate - now;
   
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
   // Output the result in an element with id="demo"
-  document.getElementById("cd").innerHTML = /*days + "d " + */hours + "h "
+  document.getElementById("cd").innerHTML = hours + "h "
   + minutes + "m " + seconds + "s left <br> until next present";
   
   // If the count down is over, write some text 
