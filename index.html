@@ -34,7 +34,6 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-    background-color: #D4AF37;
 }
 hr {
   margin: auto;
@@ -58,7 +57,7 @@ hr {
 
 <div class="bgimg">
   <div class="middle">
-    <h1>Fortnite Chapter 2 - Season 2</h1>
+    <h1>Fortnite Chapter 2 - Season 3</h1>
     <hr>
     <p id="cd" style="font-size:60px">Loading...</p>
   </div>
@@ -68,7 +67,7 @@ hr {
 </div>
 
 <script>
-var countDownDate = new Date("Feb 20, 2020 09:00:00 UTC").getTime();
+var countDownDate = new Date("Apr 29, 2020 09:00:00 UTC").getTime();
 var countdownfunction = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -80,7 +79,7 @@ var countdownfunction = setInterval(function() {
   + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
-    document.getElementById("cd").innerHTML = "Season 2 is here, start playing now!";
+    document.getElementById("cd").innerHTML = "Season 3 is here, start playing now!";
   }
 }, 1000);
 </script>
