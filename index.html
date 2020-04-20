@@ -25,7 +25,7 @@ body, html {
   margin: 0;
 }
 .bgimg {
-  background-image: url('resources/keyart.jpg');
+  background-image: url('resources/scott.png');
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -40,6 +40,8 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-color: #026157;
+  padding: 30px;
 }
 hr {
   margin: auto;
@@ -63,7 +65,7 @@ hr {
 
 <div class="bgimg">
   <div class="middle">
-    <h1>Fortnite Chapter 2 - Season 3</h1>
+    <h1>Travis Scott @ Sweaty Sands</h1>
     <hr>
     <p id="cd" style="font-size:60px">Loading...</p>
   </div>
@@ -73,7 +75,7 @@ hr {
 </div>
 
 <script>
-var countDownDate = new Date("Jun 4, 2020 09:00:00 UTC").getTime();
+var countDownDate = new Date("Apr 20, 2020 16:00:00 UTC").getTime();
 var countdownfunction = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -81,7 +83,7 @@ var countdownfunction = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("cd").innerHTML = days + "d " + hours + "h "
+  document.getElementById("cd").innerHTML = hours + "h "
   + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
