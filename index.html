@@ -25,7 +25,7 @@ body, html {
   margin: 0;
 }
 .bgimg {
-  background-image: url('resources/scott.png');
+  background-color: #03001F;
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -40,7 +40,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: #026157;
+  background-color: #4B0082;
   padding: 30px;
 }
 hr {
@@ -65,9 +65,10 @@ hr {
 
 <div class="bgimg">
   <div class="middle">
-    <h1>Travis Scott @ Sweaty Sands</h1>
+    <h1>Travis Scott: Astronomical</h1>
     <hr>
-    <p id="cd" style="font-size:60px">Loading...</p>
+	<p style="font-size:60px">Next show:</p>
+    <p id="cd" style="font-size:60px">loading...</p>
   </div>
   <div class="bottomright">
     <p><a href="disclaimer.html">Disclaimer</a></p>
@@ -75,7 +76,7 @@ hr {
 </div>
 
 <script>
-var countDownDate = new Date("Apr 20, 2020 16:00:00 UTC").getTime();
+var countDownDate = new Date("Apr 23, 2020 23:00:00 UTC").getTime();
 var countdownfunction = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -83,14 +84,21 @@ var countdownfunction = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("cd").innerHTML = hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("cd").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
-    document.getElementById("cd").innerHTML = "Season 3 is here, start playing now!";
+    document.getElementById("cd").innerHTML = "Show has started or has ended!";
   }
 }, 1000);
 </script>
 
 </body>
 </html>
+
+<!--
+Other dates:
+Apr 24, 2020 14:00:00 UTC
+Apr 25, 2020 04:00:00 UTC
+Apr 25, 2020 15:00:00 UTC
+Apr 25, 2020 22:00:00 UTC
+-->
