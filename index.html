@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com/css?family=Lato:900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <head>
-<meta property="og:title" content="Chapter 2: Season 3 Countdown" />
+<meta property="og:title" content="Fortnite Doomsday Event Countdown" />
 <meta property="og:description" content="A countdown for in-game events in Fortnite." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://fn.joachiem.nl" />
-<meta property="og:image" content="https://fn.joachiem.nl/resources/og.png" />
+<meta property="og:image" content="https://fn.joachiem.nl/resources/icon.jpg" />
 <meta property="og:site_name" content="Fortnite Event Countdown" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88448681-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-88448681-6');
-</script>
-
 <title>Event Countdown for Fortnite</title>
 <link rel="shortcut icon" href="resources/icon.jpg">
 <style>
@@ -24,56 +15,53 @@ body, html {
   height: 100%;
   margin: 0;
 }
+@font-face {
+font-family: "Fortnite";
+src: url("resources/CustomFont.woff") format("woff"),
+url("resources/CustomFont.woff2") format("woff2");
+}
+.box {
+background-color: #FEFE00;
+padding: 30px;
+color: black;
+text-decoration: none;
+}
+a {color:#000000;}
+a:visited {color:#000000;}
+a:hover {color:#000000;}
+a:active {color:#FF0000;}
 .bgimg {
-  background-image: url('resources/keyart.jpg');
+  background-image: url('resources/c2s2.jpg');
   height: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fortnite', Arial, sans-serif;;
   font-size: 40px;
+  text-align: center;
 }
 .middle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 hr {
   margin: auto;
   width: 40%;
 }
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-  font-size: 20px; 
-}
-.bottomright {
-  position: absolute;
-  bottom: 0;
-  right: 16px;
-  font-size: 20px; 
-}
 </style>
 </head>
 <body>
-
-<div class="bgimg">
+</div>
+<div class="bgimg"> <br> <h1><a class="box" href="disclaimer.html">The Doomsday event</a></h1>
   <div class="middle">
-    <h1>Fortnite Chapter 2 - Season 3</h1>
-    <hr>
-    <p id="cd" style="font-size:60px">loading...</p>
-  </div>
-  <div class="bottomright">
-    <p><a href="disclaimer.html">Disclaimer</a></p>
+    <p id="cd" style="font-size:175px">Loading...</p>
   </div>
 </div>
-
 <script>
-var countDownDate = new Date("Jun 4, 2020 09:00:00 UTC").getTime();
+var countDownDate = new Date("May 30, 2020 18:05:00 UTC").getTime();
 var countdownfunction = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -85,10 +73,9 @@ var countdownfunction = setInterval(function() {
   + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
-    document.getElementById("cd").innerHTML = "Season 3 is here, start playing now!";
+    document.getElementById("cd").innerHTML = "Event has started/finished!";
   }
 }, 1000);
 </script>
-
 </body>
 </html>
