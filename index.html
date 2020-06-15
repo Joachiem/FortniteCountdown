@@ -2,7 +2,7 @@
 <html>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <head>
-<meta property="og:title" content="Fortnite Doomsday Event Countdown" />
+<meta property="og:title" content="Fortnite Chapter 2 - Season 3 Countdown" />
 <meta property="og:description" content="A countdown for in-game events in Fortnite." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://fn.joachiem.nl" />
@@ -55,13 +55,13 @@ hr {
 </head>
 <body>
 </div>
-<div class="bgimg"> <br> <h1><a class="box" href="disclaimer.html">The Device (Doomsday) event</a></h1>
+<div class="bgimg"> <br> <h1><a class="box" href="disclaimer.html">Fortnite Chapter 2 - Season 3</a></h1>
   <div class="middle">
       <p id="cd" style="font-size:175px">Loading...</p>
   </div>
 </div>
 <script>
-var countDownDate = new Date("June 15, 2020 18:05:00 UTC").getTime();
+var countDownDate = new Date("June 17, 2020 06:00:00 UTC").getTime();
 var countdownfunction = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownDate - now;
@@ -69,7 +69,7 @@ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-document.getElementById("cd").innerHTML = /* days + "d " +  hours + "h " + */ minutes + "m " + seconds + "s ";
+document.getElementById("cd").innerHTML = days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
 	    document.getElementById("cd").innerHTML = "Event has started/finished!";
