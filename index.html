@@ -72,7 +72,7 @@ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 document.getElementById("cd").innerHTML = /* days + "d " + */ hours + "h " + minutes + "m " + seconds + "s ";
   if (distance < 0) {
     clearInterval(countdownfunction);
-	    document.getElementById("cd").innerHTML = "Event has started/finished!";
+	    document.getElementById("cd").innerHTML = "Downtime in progress!";
   }
 }, 1000);
 </script>
